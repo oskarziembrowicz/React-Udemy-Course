@@ -174,7 +174,19 @@ const updatedBook = {
 };
 updatedBook;
 
-const summary = `${title}, a ${pages}-page long book, that was written ${author} and was published in ${
-  publicationDate.split("-")[0]
+const getYear = (str) => str.split("-")[0];
+
+const summary = `${title}, a ${pages}-page long book, that was written ${author} and was published in ${getYear(
+  publicationDate
+)}. The book ${
+  hasMovieAdaptation
+    ? "has a movie adaptation"
+    : "does not have a movie adaptation"
 }`;
 summary;
+
+const pagesRange = pages > 1000 ? "over a thousand" : "less than one thousand";
+pagesRange;
+console.log(`The book has ${pagesRange} pages`);
+
+console.log(getYear(publicationDate));
