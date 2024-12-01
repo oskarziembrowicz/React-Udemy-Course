@@ -224,6 +224,7 @@ function getTotalReviewCount(book) {
 console.log(getTotalReviewCount(book));
 */
 
+/*
 function getTotalReviewCount(book) {
   const goodreads = book.reviews?.goodreads?.reviewsCount ?? 0;
   const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
@@ -282,3 +283,23 @@ const booksAfterUpdate = booksAfterDelete.map((b) =>
   b.id == 1 ? { ...b, pages: 1 } : b
 );
 booksAfterUpdate;
+*/
+
+// fetch("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
+
+// console.log("oscar");
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+
+  return data;
+}
+
+const todos = getTodos();
+console.log(todos);
+
+console.log("Hello");
