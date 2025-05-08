@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  margin-top: 1rem;
+}
